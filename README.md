@@ -8,7 +8,19 @@
 
 ## 🎯 Project Overview
 
-  This project aims to leverage the power of time series forecasting, specifically using the ARIMA (AutoRegressive Integrated Moving Average) model, to predict stock market price trends. ARIMA is a popular method for analyzing and forecasting time series data as it can capture a suite of different standard temporal structures in time series data.
+  The stock market is a complex and dynamic system, influenced by a multitude of factors ranging from global events to company news, economic indicators, and investor sentiment. Predicting stock prices has been a topic of interest for investors, analysts, and researchers for many decades. Accurate predictions can lead to significant financial gains, while inaccurate ones can lead to substantial losses. As such, various mathematical and statistical techniques have been employed to better understand and forecast stock market movements.
+
+This project aims to leverage the power of time series forecasting, specifically using the ARIMA (AutoRegressive Integrated Moving Average) model, to predict stock market price trends. ARIMA is a popular method for analyzing and forecasting time series data as it can capture a suite of different standard temporal structures in time series data.
+
+---
+
+## Problem Statement:
+
+Predict the future closing price of a given stock (in this case, the SPY ETF), based on its historical data, using the ARIMA model. The objectives are:
+
+- Conduct a thorough exploratory data analysis (EDA) to understand the underlying patterns and characteristics of the data.
+- Develop a time series forecasting model that can predict future stock prices with reasonable accuracy.
+- Evaluate the model's performance against actual stock prices to determine its efficacy and reliability.
 
 ---
 
