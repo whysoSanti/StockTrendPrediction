@@ -17,7 +17,13 @@
 The dataset consists of historical stock prices for the SPY ETF, spanning multiple years. It includes features like opening price, closing price, highest price in the day, lowest price in the day, and trading volume.
 
 Collection: The data was sourced from [YahooFinance](https://ca.finance.yahoo.com/quote/SPY/history?p=SPY)
+
 Dataset Timeline: Jan 28, 1993 - Oct 10, 2023
+
+Dataset Structure: The dataset has 7 columns: Date, Open, High, Low, Close, Adj Close, and Volume.
+                   There are 7,731 entries, spanning from January 29, 1993, to October 11, 2023.
+
+Missing Values: There are no missing values in any of the columns.
 
 ---
 
