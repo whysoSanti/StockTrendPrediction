@@ -24,7 +24,7 @@ Predict the future closing price of a given stock (in this case, the SPY ETF), b
 
 ---
 
-## 📊 Dataset
+## 📊 Dataset - Data Loading and Initial Exploration
 
 The dataset consists of historical stock prices for the SPY ETF, spanning multiple years. It includes features like opening price, closing price, highest price in the day, lowest price in the day, and trading volume.
 
@@ -37,25 +37,73 @@ Dataset Structure: The dataset has 7 columns: Date, Open, High, Low, Close, Adj 
 
 Missing Values: There are no missing values in any of the columns.
 
----
+- Initial Data Handling: The process begins by loading the data into a pandas DataFrame, a fundamental step in Python data analysis. This step ensures that the data is in a manipulatable format for further exploration.
 
-## Roadmap
-
-Completed:
-- Initial data collection and preprocessing.
-- Exploratory Data Analysis (EDA) to understand the underlying patterns and relationships in the data.
-- Feature engineering to extract meaningful information and transform data for the model.
-
-Upcoming:
-- Model building using the ARIMA technique.
-- Hyperparameter tuning and model validation.
-- Forecasting future stock prices and evaluating model performance against actual prices.
-- Potentially exploring other models and techniques for comparison.
+- Preliminary Data Assessment: Examining the dataset's summary statistics and checking for missing values. This step is crucial to understand data quality and structure.
 
 ---
 
-## Learnings
+## Data Preprocessing
 
-- The importance of thorough EDA in time series analysis.
-- The challenges of making a time series stationary.
-- The nuances of feature engineering in time series data.
+- Data Cleaning and Transformation: The focus here is on preparing the data for analysis. Converting the 'Date' column to a datetime format and setting it as an index is a critical step for time series analysis.
+
+- Feature Engineering: Calculating additional features like daily returns and rolling averages. This step is driven by the need to extract more insights from the data and potentially improve model performance.
+
+---
+
+## Exploratory Data Analysis (EDA)
+
+- Visual Analysis: Using plots to visually analyze trends, volatility, and other patterns in the data. This step is key for forming hypotheses about the data.
+
+- Deeper Insights: Conducting autocorrelation analysis. This is particularly important for time series forecasting as it provides insights into how past values of the series are related to its current values.
+
+---
+
+## Advanced EDA
+
+- Statistical Testing for Stationarity: Performing the Dickey-Fuller test to check if the series is stationary, a prerequisite for ARIMA modeling.
+
+- ACF and PACF Analysis: These plots help in identifying the order of the ARIMA model.
+
+---
+
+## Baseline Model Building
+
+- Model Selection and Fitting: Choosing ARIMA(1,1,1) based on insights from the previous steps and fitting it to the data.
+
+- Model Assessment: Evaluating the model through its summary and diagnostic plots. This includes checking the residuals for any patterns or lack thereof, which would indicate model adequacy.
+
+---
+
+## Residual Diagnostics and Model Refinement
+
+- Analyzing Model Residuals: Checking for any systematic structure left in the residuals, which could suggest model inadequacies.
+
+- Iterative Improvement: Applying a log transformation to stabilize variance and refitting the model, followed by re-evaluating the residuals. This iterative approach is key in model development.
+
+---
+
+## Additional Models
+- Experimenting with Variations: Exploring the SARIMA model, even in the absence of strong seasonality, is part of a comprehensive approach to model selection.
+
+- Comparing Different Models: This step involves assessing various models to find the best fit for the data.
+
+---
+
+## Model Evaluation Framework
+
+- Forecasting and Validation: Using the log-transformed ARIMA model to forecast future values and presenting these forecasts with confidence intervals. This step is crucial for understanding the model's practical applicability.
+
+- Practical Translation: Converting log predictions back to the original scale to make them interpretable in the real-world context.
+
+---
+
+## Summary, Key Findings, and Next Steps
+
+- Synthesizing the Work: Summarizing the entire process from data loading to forecasting provides a clear overview of the project's scope and achievements.
+
+- Insights and Learnings: Outlining key findings gives insights into what was learned about the stock price data and the model's capabilities.
+
+- Future Directions: Suggesting next steps like model refinement, advanced models, validation techniques, risk analysis, and deployment strategies shows a forward-thinking approach and an understanding that model development is an iterative and ongoing process.
+
+By following these steps, we continue refining my model's accuracy and reliability, which is crucial in the dynamic environment of the stock market. It's also important to keep abreast of the latest research and methodologies in time series forecasting and financial analysis, as this field is continually evolving.
